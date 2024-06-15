@@ -44,7 +44,7 @@ def task2():
     pca.fit(image_bw)
     cumulative_sum = np.cumsum(pca.explained_variance_ratio_) * 100
     num_components_95 = np.argmax(cumulative_sum > 95)
-    print("Кількість компонент, які пояснюють 95% дисперсії:", num_components_95)
+    print("Кількість компонент, які необхідні для 95% дисперсії:", num_components_95)
 
     plt.figure(figsize=(10, 6))
     plt.title('Кумулятивна пояснена дисперсія пояснена компонентами')
