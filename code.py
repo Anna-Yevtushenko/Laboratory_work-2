@@ -1,6 +1,9 @@
 import numpy as np
 from task2 import task2
 
+matrix = np.array([[1, 2],
+                   [2, 1]])
+
 def calculate_eigenvectors_and_values(matrix):
     eigenvalues, eigenvectors = np.linalg.eig(matrix)  # функція для обчислення власних значень та власних векторів
 
@@ -16,12 +19,7 @@ def calculate_eigenvectors_and_values(matrix):
             print("Рівність виконується")
         else:
             print("Рівність не виконується: A⋅v ≠ λ⋅v")
-
     return eigenvalues, eigenvectors
-
-matrix = np.array([[1, 2], [2, 1]])
-
-
 
 def start_program():
     while True:
@@ -34,11 +32,9 @@ def start_program():
         else:
             print("You entered an invalid answer. Please enter 'y' or 'n'.")
 
-
 def main():
     start_program()
     while True:
-
         command = input("Chose task: 1, 2, 3 or exit: ").strip().lower()
         if command == 'exit':
             print('Exit!')
