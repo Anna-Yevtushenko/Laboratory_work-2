@@ -1,5 +1,6 @@
 import numpy as np
 from task2 import task2
+from task3 import task3
 
 matrix = np.array([[1, 2],
                    [2, 1]])
@@ -43,6 +44,8 @@ def main():
             eigenvalues, eigenvectors = calculate_eigenvectors_and_values(matrix)
         elif command == '2':
             task2()
+        elif command == '3':
+            task3()
         else:
             print("Invalid option. Choose between '1', '2', or 'exit'.")
 
